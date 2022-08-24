@@ -13,6 +13,7 @@ import org.hariom.practicleexam.adapter.NumberAdapter
 import org.hariom.practicleexam.viewmodel.NumberViewFactory
 import org.hariom.practicleexam.viewmodel.NumberViewModel
 import org.hariom.practicleexam.model.MyNumber
+import org.hariom.practicleexam.viewmodel.CounterViewModel
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +21,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val counterViewModel = ViewModelProvider(this).get(CounterViewModel::class.java)
+
 
         val numberObject = mutableListOf<MyNumber>()
         numberObject.add(MyNumber(0,1))
